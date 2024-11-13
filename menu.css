@@ -7,6 +7,16 @@ body {
     padding-right: 10%;
 }
 
+
+.user-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 105%;
+    margin-top: -3%;
+}
+
 nav {
     position: absolute;
     top: 15%;
@@ -20,7 +30,8 @@ nav {
     margin: 20px 20px 20px 20px;
     padding: 5px;
     width: 79.4%;
-    
+    z-index: 1;
+
 }
 
 nav ul {
@@ -62,44 +73,11 @@ nav ul li a:hover {
     width: 150px;
 }
 
-.Mmakan1 {
-    width: 100%;
-    height: 615.4px;
-    margin-top: 9%;
-    margin-left: 0%;
-}
-
-.logofb {
-    position: absolute;
-    top: 2px;
-    left: 520px;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
-}
-
-.logoig {
-    position: absolute;
-    top: 2px;
-    left: 560px;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
-}
-
-.logoyt {
-    position: absolute;
-    top: 2px;
-    left: 600px;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
-}
 
 .search {
     position: absolute;
     background-color: rgb(223, 208, 208);
-    width: 510px;   
+    width: 510px;
     height: 40px;
     left: 500px;
     border-radius: 50px;
@@ -115,9 +93,9 @@ form.example input[type=text] {
     width: 96%;
     background: rgb(223, 208, 208);
     border-radius: 50px;
-  }
-  
-  form.example button {
+}
+
+form.example button {
     float: left;
     width: 200%;
     padding: 10px;
@@ -127,14 +105,114 @@ form.example input[type=text] {
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
-  }
-  
-  form.example button:hover {
+}
+
+form.example button:hover {
     background: #0b7dda;
-  }
-  
-  form.example::after {
+}
+
+form.example::after {
     content: "";
     clear: both;
     display: table;
+}
+
+
+
+.account {
+    position: relative;
+    top: 20px;
+}
+
+.profile {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    position: absolute;
+    width: 260px;
+    background-color: rgb(211, 164, 164);
+   top: 100px;
+   right: 15px;
+   border-radius: 20px;
+
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.5s;
+   z-index: 2;
+}
+
+.active{
+    visibility: visible;
+    opacity: 1;
+    top: 75px;
+}
+
+.menu::before{
+    content: "";
+    background-color: rgb(219, 200, 200);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -8px;
+    right: 35px;
+    rotate: 45deg;
+}
+
+
+
+.menu ul{
+    margin-bottom: 20px;
+
+}
+.menu ul li{
+    padding: 15px 20px;
+    border-top: 1px solid #33333310;
+    background: rgb(190, 136, 154d,);
+    transition: 0.5s;
+}
+
+.menu ul li:hover{
+    background: rgb(190, 136, 154);
+}
+
+.menu ul li i{
+    font-size: 1.3rem;
+    color: #b4b4b4;
+    transition: 0.5s;
+}
+.menu ul li:hover i{
+    color: #111;
+}
+.menu ul li a{
+    font-size: 1.3rem;
+    color: #292929;
+    margin-left: 20px;
+}
+.sub-menu{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}        
+.sub-menu img{
+    width: 30px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 10px;
 }
